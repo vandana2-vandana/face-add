@@ -1,0 +1,101 @@
+<!-- <ion-header>
+    <ion-toolbar>
+        <ion-title class="top-header-center">
+           
+        </ion-title>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+    <div>
+    <div *ngFor="let video of videos">
+        <div  (click)="changeVideoAudio(video)" id="container" class="video-full-slider">
+          <video style="height: 100vh; width:100vw"
+            inViewport
+            [inViewportOptions]="{ threshold: [0, 0.65], partial: true }"
+        
+            (inViewportAction)="onIntersection($event)" 
+            playsinline loop
+             preload="auto" muted="muted"
+            [poster]="video?.src"    
+            [id]="'media-' + video?.id" class="video-full-slider">
+            <source [src]="video.src" type="video/mp4" src="">
+          </video>
+        </div>
+    <!-- <div id="container" class="video-full-slider">
+        <video style="height: 100vh; width:100vw" controls autoplay loop>
+        <source src="https://file-examples.com/storage/fe6081327b634aed29d0972/2017/04/file_example_MP4_1920_18MG.mp4" type="video/mp4">
+    
+      </video>
+    </div> -->
+
+    <div class="Following-header">
+        Following | For you
+    </div>
+
+    <div class="left-home-icons">
+        <div class="user-title-hrs">
+            <span class="user-tag">@username Description goesDescription goesDescription goes</span> <span class="hours-div">3hrs ago</span>
+        </div>
+        <div class="description-title-hrs">
+            <h2>Description goes here Description goes hereDescription goes here</h2>
+            <div class="description-tag-hrs">
+                <span>#harshtags</span> <span>#sloetags</span> <span>#kavithatags</span> <span>#harshtags</span> <span>#sloetags</span> <span>#kavithatags</span>
+            </div>
+            <div class="see-trtion">
+                See Translation
+            </div>
+
+        </div>
+    </div>
+    <div class="right-home-icons">
+
+        <div class="icon-right-video">
+            <div class="user-div-icon">
+                <img src="../../assets/photo-user.jfif" />
+            </div>
+            <ion-icon name="add-circle" class="user-plus"></ion-icon>
+        </div>
+        <div class="icon-right-video">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span>364</span>
+        </div>
+        <div class="icon-right-video">
+            <ion-icon name="chatbubbles-outline"></ion-icon>
+            <span>105</span>
+        </div>
+        <div class="icon-right-video">
+            <ion-icon name="arrow-redo-outline"></ion-icon>
+            <span>Share</span>
+        </div>
+    </div>
+
+</div>
+</div>
+</ion-content>
+<ion-footer class="footer-div">
+    <div class="tab_container">
+        <div class="tab_button selected">
+            <ion-icon name="home-outline"></ion-icon>
+            <ion-label>Home</ion-label>
+        </div>
+        <div class="tab_button">
+            <ion-icon name="search-outline"></ion-icon>
+            <ion-label>Search</ion-label>
+        </div>
+        <div class="tab_button">
+            <div class="add_new">
+                <ion-icon name="add-outline" class="center_item"></ion-icon>
+            </div>
+
+        </div>
+        <div class="tab_button">
+            <ion-icon name="notifications-outline"></ion-icon>
+            <ion-label>Notification</ion-label>
+        </div>
+        <div class="tab_button">
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>Profile</ion-label>
+        </div>
+    </div>
+</ion-footer>

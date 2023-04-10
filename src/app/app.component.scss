@@ -1,0 +1,53 @@
+::ng-deep .footer-div {
+  border-top: 1px solid #f1f1f1;
+  background-color: #393534;
+  .tab_container {
+      padding: 0px 0px;
+      //  background-image: url(../assets/icon/footer.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      .tab_button {
+          width: 20%;
+          display: inline-flex;
+          padding-top: 0px;
+          flex-direction: column;
+          padding: 10px 0px;
+          ion-icon {
+              display: block;
+              margin: auto;
+              height: 30px;
+              width: 30px;
+              font-size: 30px;
+              color: #fff;
+          }
+          ion-label {
+              color: #fff;
+              margin: 0px;
+              font-size: 11px;
+              text-align: center;
+              padding: 7px 0px;
+              //  font-family: exo2-medium;
+              opacity: 0.6;
+          }
+          &.selected {
+              background-color: #ff5935;
+          }
+          .add_new {
+              background: #ff5935;
+              height: 55px;
+              width: 55px;
+              position: absolute;
+              top: -20px;
+              left: 50%;
+              transform: translateX(-50%);
+              border-radius: 50%;
+              .center_item {
+                  height: 53px;
+                  width: 53px;
+                  font-size: 53px;
+                  color: #fff;
+              }
+          }
+      }
+  }
+}

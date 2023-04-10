@@ -1,0 +1,27 @@
+<ion-content class="bg-login-main">
+    <div class="vertical-align-content">
+        <div class="logo-login">F</div>
+        <form #loginForm="ngForm" class="form-login-top" novalidate>
+            <ion-card id="card-bg">
+                <ion-item lines="none">
+                    <!-- <ion-label class="label-md-h" position="stacked" class="lab-color">Email</ion-label> -->
+                    <ion-input required type="name" autocorrect="eye-off" placeholder="Email" name="username" type="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <!-- <ion-label class="label-md-h" position="stacked" class="lab-color">Password</ion-label> -->
+                    <ion-row class="password-row-style">
+                        <ion-input required [clearOnEdit]="false" placeholder="Password" name="password"></ion-input>
+                        <ion-icon class="password-show-hide" item-end></ion-icon>
+                    </ion-row>
+                </ion-item>
+
+                <div>
+                    <ion-button [disabled]="loginForm.invalid" type="submit" [ngClass]="loginForm.invalid ? 'disabled-loginbuttonbottom' : 'loginbuttonbottom'" color="primary" routerDirection="root">Log In
+                    </ion-button>
+                </div>
+            </ion-card>
+        </form>
+    </div>
+</ion-content>
